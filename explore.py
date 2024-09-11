@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np 
 
-##def explore_data(data):
+
 def explore_data(data):
 
 
@@ -86,5 +86,9 @@ def explore_data(data):
       print("Value Counts:")
       print(value_counts)
       print("-" * 40)
-
+   # Handle edge cases
+  if data.empty:
+    print("DataFrame is empty.")
+  elif data.isnull().all().all():
+    print("DataFrame contains only missing values.")   
    
